@@ -153,19 +153,16 @@ public class DTConfigs {
 
         COMMON_BUILDER.comment("Vanilla Trees Settings").push("vanilla");
         REPLACE_VANILLA_SAPLING = COMMON_BUILDER.comment("Right clicking with a vanilla sapling places a dynamic sapling instead.").
-                define("replaceVanillaSapling", false);
+                define("replaceVanillaSapling", true);
         REPLACE_NYLIUM_FUNGI = COMMON_BUILDER.comment("Crimson Fungus and Warped Fungus that sprout from nylium will be dynamic instead.").
                 define("replaceNyliumFungi", true);
+        GENERATE_DIRT_BUCKET_RECIPES = COMMON_BUILDER.comment("If enabled, dirt bucket recipes will be automatically generated.")
+                .define("generateDirtBucketRecipes", false);
         COMMON_BUILDER.pop();
 
         SERVER_BUILDER.comment("World Generation Settings").push("world");
         PODZOL_GEN = SERVER_BUILDER.comment("Randomly generate podzol under select trees like spruce.").
                 define("podzolGen", true);
-        SERVER_BUILDER.pop();
-
-        SERVER_BUILDER.comment("Miscellaneous Settings").push("misc");
-        GENERATE_DIRT_BUCKET_RECIPES = SERVER_BUILDER.comment("If enabled, dirt bucket recipes will be automatically generated.")
-                .define("generateDirtBucketRecipes", true);
         SERVER_BUILDER.pop();
 
         COMMON_BUILDER.comment("World Generation Settings").push("world");
